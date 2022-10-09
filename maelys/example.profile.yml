@@ -1,0 +1,19 @@
+# PUT IT TO ~/.dbt
+config:
+    send_anonymous_usage_stats: False
+    use_colors: True
+
+maelys:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: postgres
+      dbname: postgres
+      schema: public
+
+  target: dev

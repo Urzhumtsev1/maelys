@@ -1,0 +1,69 @@
+version: 2
+
+seeds:
+  - name: parsed_data_types
+    config:
+      column_types:
+        date_time: TEXT
+        settlement_id: BIGINT
+        type: TEXT
+        order_id: TEXT
+        sku: TEXT
+        description: TEXT
+        quantity: INT
+        marketplace: TEXT
+        account_type: TEXT
+        fulfillment: TEXT
+        order_city: TEXT
+        order_state: TEXT
+        order_postal: TEXT
+        tax_collection_model: TEXT
+        product_sales: NUMERIC(10, 2)
+        product_sales_tax: NUMERIC(10, 2)
+        shipping_credits: NUMERIC(10, 2)
+        shipping_credits_tax: NUMERIC(10, 2)
+        gift_wrap_credits: NUMERIC(10, 2)
+        giftwrap_credits_tax: NUMERIC(10, 2)
+        Regulatory_Fee: NUMERIC(10, 2)
+        Tax_On_Regulatory_Fee: NUMERIC(10, 2)
+        promotional_rebates: NUMERIC(10, 2)
+        promotional_rebates_tax: NUMERIC(10, 2)
+        marketplace_withheld_tax: NUMERIC(10, 2)
+        selling_fees: NUMERIC(10, 2)
+        fba_fees: NUMERIC(10, 2)
+        other_transaction_fees: NUMERIC(10, 2)
+        other: TEXT
+        total: NUMERIC(10, 2)
+  - name: transactions_test
+    config:
+      column_types:
+        date_time: timestamp
+        settlement_id: BIGINT
+        type: TEXT
+        order_id: TEXT
+        sku: TEXT
+        description: TEXT
+        quantity: INT
+        marketplace: TEXT
+        account_type: TEXT
+        fulfillment: TEXT
+        order_city: TEXT
+        order_state: TEXT
+        order_postal: TEXT
+        tax_collection_model: TEXT
+        product_sales: FLOAT
+        product_sales_tax: FLOAT
+        shipping_credits: FLOAT
+        shipping_credits_tax: FLOAT
+        gift_wrap_credits: FLOAT
+        giftwrap_credits_tax: FLOAT
+        Regulatory_Fee: FLOAT
+        Tax_On_Regulatory_Fee: FLOAT
+        promotional_rebates: FLOAT
+        promotional_rebates_tax: FLOAT
+        marketplace_withheld_tax: FLOAT
+        selling_fees: FLOAT
+        fba_fees: FLOAT
+        other_transaction_fees: FLOAT
+        other: TEXT
+        total: FLOAT

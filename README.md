@@ -5,7 +5,9 @@ Welcome to your new dbt project!
 Try running the following commands:
 - dbt seed (to parse data from csv)
 - dbt run (to run model)
-- dbt test
+- dbt test (not ready)
+- dbt docs generate
+- dbt docs serve
 
 
 ### Resources:

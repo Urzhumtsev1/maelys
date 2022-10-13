@@ -9,7 +9,7 @@ with source_data as (
 -- checkpoint: first create stage tables for Marketplace, Payment
 select 
     order_id,
-    1 as marketplace_id,
+    "_id" as marketplace_id,
     1 as payment_id
 from source_data
 

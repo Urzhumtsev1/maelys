@@ -1,0 +1,24 @@
+
+version: 2
+
+sources:
+  - name: maelys
+    database: postgres
+    schema: public
+
+    tables:
+      - name: parsed_data_types
+
+
+models:
+  - name: transactions
+    description: "clean fact table with data types"
+    columns:
+      - name: id
+        description: "id of fact"
+        tests:
+          - unique
+          - not_null
+
+
+

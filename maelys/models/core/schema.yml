@@ -7,7 +7,7 @@ sources:
     schema: public
 
     tables:
-      - name: parsed_data_types
+      - name: transactions
 
 
 models:
@@ -16,22 +16,18 @@ models:
     columns:
       - name: order_id
         description: "order"
-        # That is the question
         tests:
-          - unique
           - not_null
 
   - name: marketplace
     description: "marketplace"
     columns:
-      - name: id
-        description: "marketplace id"
+      - name: marketplace_id
+        description: "id of the marketplace"
         tests:
-          - unique
           - not_null
       - name: name
         tests:
-          - unique
           - not_null
 
 

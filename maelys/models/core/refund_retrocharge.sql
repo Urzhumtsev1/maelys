@@ -7,7 +7,7 @@
 
 with source_data as (
 
-   select * from {{ ref('transactions') }}
+   select * from {{ ref('transactions') }} where "type" = 'Refund_Retrocharge'
 
 ),
 marketplace_pre_selection as (

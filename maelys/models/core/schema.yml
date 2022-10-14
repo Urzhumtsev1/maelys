@@ -22,7 +22,7 @@ models:
   - name: marketplace
     description: "marketplace"
     columns:
-      - name: marketplace_id
+      - name: id
         description: "id of the marketplace"
         tests:
           - not_null

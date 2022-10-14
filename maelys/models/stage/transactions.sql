@@ -18,7 +18,8 @@ select
       when marketplace is null 
       then 'marketplace unknown' 
       else marketplace 
-      end as marketplace, account_type, fulfillment, 
+      end as marketplace, 
+    account_type, fulfillment, 
     order_city, order_state, order_postal, 
     tax_collection_model, "product)sales", 
     product_sales_tax, shipping_credits, 

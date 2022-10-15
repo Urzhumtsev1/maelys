@@ -21,5 +21,58 @@ models:
           - unique
           - not_null
 
+  - name: marketplace
+    description: "marketplace"
+    columns:
+      - name: id
+        description: "id of the marketplace"
+        tests:
+          - not_null
+      - name: name
+        tests:
+          - not_null
+
+  - name: payment_total
+    description: "total view"
+    columns:
+      - name: pay_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id
+      - name: total
+        description: "sum of payments, include any type of payment"
+        tests:
+          - not_null
+
+  - name: single_pay
+    description: "single_pay model"
+    columns:
+      - name: pay_id
+        tests:
+          - not_null
+      - name: pay_type
+        type: pay_type
+        description: "enumeration of payment types"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [
+                'product_sales', 'product_sales_tax', 
+                'shipping_credits', 'shipping_credits_tax', 
+                'gift_wrap_credits', 'giftwrap_credits_tax', 
+                'regulatory_fee', 'tax_on_regulatory_fee', 
+                'promotional_rebates', 'promotional_rebates_tax', 
+                'marketplace_withheld_tax', 'selling_fees', 
+                'fba_fees', 'other_transaction_fees', 'other'
+              ]
+      - name: amount
+        description: "amount of payment type"
+        tests:
+          - not_null
+
+
 
 

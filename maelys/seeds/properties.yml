@@ -5,7 +5,7 @@ seeds:
     config:
       column_types:
         _id: BIGSERIAL
-        date_time: TEXT
+        date_time: timestamp
         settlement_id: BIGINT
         type: TEXT
         order_id: TEXT

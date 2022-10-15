@@ -4,6 +4,7 @@ seeds:
   - name: parsed_data_types
     config:
       column_types:
+        _id: BIGSERIAL
         date_time: TEXT
         settlement_id: BIGINT
         type: TEXT

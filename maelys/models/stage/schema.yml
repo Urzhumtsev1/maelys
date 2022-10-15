@@ -15,7 +15,7 @@ models:
     description: "clean fact table with data types"
     columns:
       - name: id
-        type: bigint
+        type: bigserial
         description: "id of fact"
         tests:
           - unique

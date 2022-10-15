@@ -18,6 +18,18 @@ models:
         description: "order"
         tests:
           - not_null
+      - name: payment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id
+      - name: marketplace_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('marketplace')
+              field: id
 
   - name: marketplace
     description: "marketplace"
@@ -37,6 +49,9 @@ models:
         tests:
           - not_null
           - unique
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id
       - name: total
         description: "sum of payments, include any type of payment"
         tests:

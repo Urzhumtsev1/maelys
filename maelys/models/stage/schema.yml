@@ -21,6 +21,15 @@ models:
           - unique
           - not_null
 
+  - name: transaction_meta
+    columns:
+      - name: id
+        type: bigint
+        description: "id of fact"
+        tests:
+          - unique
+          - not_null
+
   - name: marketplace
     description: "marketplace"
     columns:

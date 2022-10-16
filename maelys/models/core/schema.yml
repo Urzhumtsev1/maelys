@@ -24,6 +24,9 @@ models:
           - relationships:
               to: ref('single_pay')
               field: pay_id
+          - relationships:
+              to: ref('transaction_meta')
+              field: id
       - name: marketplace_id
         tests:
           - not_null

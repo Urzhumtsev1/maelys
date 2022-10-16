@@ -34,4 +34,39 @@ models:
               to: ref('marketplace')
               field: id
 
+  - name: chargeback_refund
+    description: "chargeback_refund relation"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('transaction_meta')
+              field: id
+      - name: payment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id 
+      - name: marketplace_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('marketplace')
+              field: id
+      - name: city_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('city')
+              field: id
+      - name: sku_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('sku')
+              field: id
+
   

@@ -30,6 +30,14 @@ models:
           - unique
           - not_null
 
+  - name: sku
+    columns:
+      - name: id
+        type: bigint
+        tests:
+          - unique
+          - not_null
+
   - name: marketplace
     description: "marketplace"
     columns:

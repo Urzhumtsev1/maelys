@@ -134,4 +134,27 @@ models:
           - relationships:
               to: ref('marketplace')
               field: id
+
+  - name: fba_inventory_fee
+    description: "FBA Inventory Fee relation"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('transaction_meta')
+              field: id
+      - name: payment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id 
+      - name: marketplace_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('marketplace')
+              field: id
   

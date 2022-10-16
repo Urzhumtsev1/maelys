@@ -158,3 +158,29 @@ models:
               to: ref('marketplace')
               field: id
   
+  - name: order_retrocharge
+    description: "Order_Retrocharge relation"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('transaction_meta')
+              field: id
+      - name: order_id
+        description: "order"
+        tests:
+          - not_null
+      - name: payment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id
+      - name: marketplace_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('marketplace')
+              field: id

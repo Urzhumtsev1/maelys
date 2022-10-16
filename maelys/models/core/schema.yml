@@ -68,6 +68,7 @@ models:
           - relationships:
               to: ref('sku')
               field: id
+
   - name: adjustment
     description: "Adjustment relation"
     columns:
@@ -93,4 +94,23 @@ models:
       - name: order_id
         tests:
           - not_null
+
+  - name: transfer
+    description: "Transfer relation"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('transaction_meta')
+              field: id
+      - name: payment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('single_pay')
+              field: pay_id 
+
+  
   

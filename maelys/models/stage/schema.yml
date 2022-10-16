@@ -73,6 +73,18 @@ models:
         tests:
           - not_null
 
-
-
-
+  - name: city
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: order_city
+        tests:
+          - not_null
+      - name: order_state
+        tests:
+          - not_null
+      - name: order_postal
+        tests:
+          - not_null
